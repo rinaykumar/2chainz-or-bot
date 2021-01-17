@@ -1,6 +1,6 @@
 {
-  "name": "guesstrumptweet",
-  "version": "0.1.0",
+  "name": "2chainz-or-not",
+  "version": "0.0.1",
   "private": true,
   "proxy": "http://localhost:5000",
   "dependencies": {
