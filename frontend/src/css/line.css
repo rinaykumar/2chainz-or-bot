@@ -1,0 +1,29 @@
+.lineBox{
+    margin-left:1%;
+    margin-bottom: 3%;
+    padding: 1%;
+    background-color: #ededed;
+    width: 92%;
+    height: auto;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.lineBox:hover{
+    box-shadow: 1px 1px 13px -2px rgba(30, 30, 60, 0.9);
+}
+
+.text-holder{
+    width: 85%;
+    top: -15px;
+    position: relative;
+    display: inline-flex;
+}
+
+.lineText{
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
+    font-weight: 400;
+    font-size: 20px;
+    text-align: left;
+}
