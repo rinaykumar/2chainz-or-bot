@@ -11,8 +11,6 @@ corpus = markovify.NewlineText(corpus, state_size=2)
 
 app = Flask(__name__, static_folder='./frontend/build', static_url_path='/')
 
-#test
-
 @app.route('/')
 def index():
     return app.send_static_file('index.html')
