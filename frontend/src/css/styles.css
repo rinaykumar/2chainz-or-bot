@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran&display=swap');
+
 body {
   padding-top: 30px;
   /*justify-content: center;*/
@@ -73,7 +75,13 @@ body {
 }
 
 /* .background {
-  background-image: url('../assets/img/cover.jpg');
+  min-height: 100%;
+  margin: 0 auto -10px;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
 } */
 
 
@@ -177,7 +185,8 @@ body {
 
 @media (min-width: 400px) {
   .line-text {
-    font-size: medium;
+    font-size: large;
+    font-family: Catamaran;
     font-weight: 400;
     font-style: oblique;
     padding-top: 16px;
@@ -206,7 +215,10 @@ body {
   margin-bottom: 0px;
 }
 
+
+
 .footer {
+  height: 10px;
   position: fixed; 
   padding-top: 5px;
   padding-bottom: 10px;

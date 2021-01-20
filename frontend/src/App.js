@@ -403,12 +403,12 @@ class App extends React.Component {
             START
           </button>
         </div>
-        <footer className="text-center footer">
+        {/* <footer className="text-center footer">
           <p className="footer-text">
             ©&nbsp;2021 rinaykumar |&nbsp;
             <a href="https://github.com/rinaykumar/2chainz-or-not">GitHub</a>
           </p>
-        </footer> 
+        </footer>  */}
         <Modal
           show={this.state.show}
           onHide={this.hideModal}
