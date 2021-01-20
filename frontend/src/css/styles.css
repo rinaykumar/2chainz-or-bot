@@ -132,7 +132,7 @@ body {
   border-radius: 50px;
   height: 80px;
   margin-bottom: 15px;
-  padding-left: 2px;
+  padding-left: 4px;
 }
 
 @media (max-width: 768px) {
