@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Catamaran&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
 body {
   padding-top: 30px;
@@ -21,6 +22,7 @@ body {
 @media (min-width: 576px) {
   .page h1 {
     font-size: 55px;
+    font-family: 'Montserrat';
     font-weight: bold;
     align-content: center;
     vertical-align: middle;
@@ -45,6 +47,7 @@ body {
     padding-top: 10px;
     font-size: 90px;
     padding-left: 10px;
+    font-family: 'Montserrat';
   }
 
   .gameover {
@@ -68,8 +71,9 @@ body {
 
 @media (max-width: 575px) {
   .yup {
-    font-size: 70px;
+    font-size: 60px;
     padding-left: 10px;
+    font-family: 'Montserrat';
   }
 
   .heartimg {
@@ -234,31 +238,30 @@ body {
   margin-bottom: 0px;
 }
 
-.background {
-  padding-bottom:120px;
+html,
+body {
+ height: 100%;
+ position: relative;
 }
 
-.footer {
-  position:fixed;
-  left:0;
-  bottom:0;
-  right:0;
-}
+#root {
+  min-height: 100vh;
+  /* overflow: hidden;
+  display: block; */
+  position: relative;
+  padding-bottom: 0px; 
+ }
+
+ footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+ }
 
 .footer-text {
   font-size: xx-small;
   color: lightgrey;
-  vertical-align: bottom;
-}
-
-.about {
-  padding-top: 30px;
-  align-content: center;
-}
-
-.about-p {
-  font-size: smaller;
-  color: grey;
 }
 
 .fake-line {

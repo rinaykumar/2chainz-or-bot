@@ -524,7 +524,7 @@ class App extends React.Component {
                   <img id="heart5" src={Heart} className="heartimg" alt=""/>
                 </div>
                 <p className="score-text">
-                  <img src={Chain} className="chainimg" alt=""/> {this.state.correct}
+                {this.state.correct} <img src={Chain} className="chainimg" alt=""/>
                 </p>
               </div>
             </section>
@@ -579,12 +579,6 @@ class App extends React.Component {
             </section>
           </div>
         </div>
-        {/* <footer className="text-center mt-auto">
-          <p className="footer-text">
-            ©&nbsp;2021 rinaykumar |&nbsp;
-            <a href="https://github.com/rinaykumar/2chainz-or-not">GitHub</a>
-          </p>
-        </footer>  */}
         <Modal
           show={this.state.show}
           onHide={this.hideModal}
