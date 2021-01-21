@@ -38,6 +38,7 @@ import Line29 from './assets/img/line-img/line29.jpeg';
 import Line30 from './assets/img/line-img/line30.jpeg';
 import Akon from './assets/img/line-img/akon.jpg';
 import Heart from './assets/img/heart.png';
+import NoHeart from './assets/img/noheart.png';
 import Chain from './assets/img/chain.png';
 import Loading from './assets/img/loading.gif';
 
@@ -90,13 +91,13 @@ class App extends React.Component {
     this.setState({ lives: this.state.lives - 25 });
     switch (this.state.lives) {
       case 100:
-        document.getElementById('heart4').src = '';
+        document.getElementById('heart4').src = {NoHeart};
         break;
       case 75:
-        document.getElementById('heart3').src = '';
+        document.getElementById('heart3').src = {NoHeart};
         break;
       case 50:
-        document.getElementById('heart2').src = '';
+        document.getElementById('heart2').src = {NoHeart};
         break;
       default:
         break;
@@ -112,7 +113,7 @@ class App extends React.Component {
 
   showModal3() {
     this.setState({ lives: 0 });
-    document.getElementById('heart1').src = '';
+    document.getElementById('heart1').src = {NoHeart};
     this.setState({
       show3: true,
     });

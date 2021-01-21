@@ -221,7 +221,7 @@ body {
 
 @media (max-width: 399px) {
   .line-text {
-    font-size: smaller;
+    font-size: 12px;
     font-weight: 400;
     font-style: oblique;
     padding-top: 16px;
