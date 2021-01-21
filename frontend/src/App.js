@@ -1,7 +1,7 @@
 import React from 'react';
 import './css/styles.css';
 import './css/bootstrap.min.css';
-import { Modal, ProgressBar } from 'react-bootstrap';
+import { Modal } from 'react-bootstrap';
 // Images
 import Header from './assets/img/header.jpg';
 import Yup from './assets/img/yup2.gif';
@@ -95,6 +95,8 @@ class App extends React.Component {
       case 40:
         document.getElementById('heart2').src = '';
         break;
+      default:
+        break;  
     }
   }
 
@@ -241,6 +243,7 @@ class App extends React.Component {
         break;
       default:
         this.setState({ lineImg1: Line25 });
+        break;
     }
   }
 
@@ -322,6 +325,7 @@ class App extends React.Component {
         break;
       default:
         this.setState({ lineImg2: Line25 });
+        break;
     }
   }
 
@@ -403,6 +407,7 @@ class App extends React.Component {
         break;
       default:
         this.setState({ lineImg3: Line25 });
+        break;
     }
   }
 
@@ -464,10 +469,10 @@ class App extends React.Component {
       this.showModal();
     } else {
       console.log('Lives: ' + this.state.lives);
-      if (this.state.lives == 20) {
+      if (this.state.lives === 20) {
         this.showModal3();
       } else {
-        this.showModal2(); //////////////
+        this.showModal2();
       }
     }
 
@@ -489,6 +494,7 @@ class App extends React.Component {
               className="rounded-circle float-none header-img"
               src={Header}
               height="70px"
+              alt=""
             />
             <h1>&nbsp;2CHAINZ OR NOT</h1>
           </div>
@@ -498,79 +504,7 @@ class App extends React.Component {
             <p className="fake-line">Can you spot the fake line?</p>
           </div>
         </section>
-        <div className="text-center blur-div" id="blurdiv">
-          <section className="d-flex justify-content-center score">
-            <div className="d-flex justify-content-between align-items-start align-items-md-start score-timer">
-              <div className="d-flex align-items-start heartdiv">
-                <img id="heart1" src={Heart} className="heartimg" />
-                <img id="heart2" src={Heart} className="heartimg" />
-                <img id="heart3" src={Heart} className="heartimg" />
-                <img id="heart4" src={Heart} className="heartimg" />
-                <img id="heart5" src={Heart} className="heartimg" />
-              </div>
-
-              <p className="score-text">
-                <img src={Chain} className="chainimg" /> {this.state.correct}
-              </p>
-
-              {/* <ProgressBar variant="danger" now={this.state.lives} /> */}
-
-              {/* <p className="text-left d-flex justify-content-start score-text">
-                &nbsp; &nbsp; ROUND: {this.state.total + 1}
-              </p> */}
-              {/* <p className="text-right d-flex justify-content-end align-items-md-center score-text">
-                &nbsp; &nbsp; SCORE: {this.state.correct} CHAINZ
-              </p> */}
-            </div>
-          </section>
-          <section className="text-center d-flex float-none justify-content-center align-items-center lines">
-            <div className="card text-center d-flex justify-content-center align-items-center align-content-center align-self-center">
-              <div
-                id="lineBox"
-                className="d-flex align-items-center line1"
-                onClick={() => this.counter(0)}
-              >
-                <img
-                  className="rounded-circle d-flex justify-content-start"
-                  src={this.state.lineImg1}
-                  height="70px"
-                />
-                <p className="text-left line-text">
-                  "{this.state.allLines[0]}"
-                </p>
-              </div>
-              <div
-                id="lineBox2"
-                className="d-flex align-items-center line1"
-                onClick={() => this.counter(1)}
-              >
-                <img
-                  className="rounded-circle d-flex justify-content-start"
-                  src={this.state.lineImg2}
-                  height="70px"
-                />
-                <p className="text-left line-text">
-                  "{this.state.allLines[1]}"
-                </p>
-              </div>
-              <div
-                id="lineBox3"
-                className="d-flex align-items-center line1"
-                onClick={() => this.counter(2)}
-              >
-                <img
-                  className="rounded-circle d-flex justify-content-start"
-                  src={this.state.lineImg3}
-                  height="70px"
-                />
-                <p className="text-left line-text">
-                  "{this.state.allLines[2]}"
-                </p>
-              </div>
-            </div>
-          </section>
-        </div>
-        <div className="d-flex justify-content-center button-div">
+        <div className="outer-div text-center">
           <button
             className="btn btn-dark btn-lg text-uppercase text-center rounded-pill"
             id="start-button"
@@ -579,8 +513,73 @@ class App extends React.Component {
           >
             START
           </button>
+          <div className="text-center blur-div" id="blurdiv">
+            <section className="d-flex justify-content-center score">
+              <div className="d-flex justify-content-between align-items-start align-items-md-start score-timer">
+                <div className="d-flex align-items-start heartdiv">
+                  <img id="heart1" src={Heart} className="heartimg" alt=""/>
+                  <img id="heart2" src={Heart} className="heartimg" alt=""/>
+                  <img id="heart3" src={Heart} className="heartimg" alt=""/>
+                  <img id="heart4" src={Heart} className="heartimg" alt=""/>
+                  <img id="heart5" src={Heart} className="heartimg" alt=""/>
+                </div>
+                <p className="score-text">
+                  <img src={Chain} className="chainimg" alt=""/> {this.state.correct}
+                </p>
+              </div>
+            </section>
+            <section className="text-center d-flex float-none justify-content-center align-items-center lines">
+              <div className="card text-center d-flex justify-content-center align-items-center align-content-center align-self-center">
+                <div
+                  id="lineBox"
+                  className="d-flex align-items-center line1"
+                  onClick={() => this.counter(0)}
+                >
+                  <img
+                    className="rounded-circle d-flex justify-content-start"
+                    src={this.state.lineImg1}
+                    height="70px"
+                    alt=""
+                  />
+                  <p className="text-left line-text">
+                    "{this.state.allLines[0]}"
+                  </p>
+                </div>
+                <div
+                  id="lineBox2"
+                  className="d-flex align-items-center line1"
+                  onClick={() => this.counter(1)}
+                >
+                  <img
+                    className="rounded-circle d-flex justify-content-start"
+                    src={this.state.lineImg2}
+                    height="70px"
+                    alt=""
+                  />
+                  <p className="text-left line-text">
+                    "{this.state.allLines[1]}"
+                  </p>
+                </div>
+                <div
+                  id="lineBox3"
+                  className="d-flex align-items-center line1"
+                  onClick={() => this.counter(2)}
+                >
+                  <img
+                    className="rounded-circle d-flex justify-content-start"
+                    src={this.state.lineImg3}
+                    height="70px"
+                    alt=""
+                  />
+                  <p className="text-left line-text">
+                    "{this.state.allLines[2]}"
+                  </p>
+                </div>
+              </div>
+            </section>
+          </div>
         </div>
-        {/* <footer className="text-center footer">
+        {/* <footer className="text-center mt-auto">
           <p className="footer-text">
             ©&nbsp;2021 rinaykumar |&nbsp;
             <a href="https://github.com/rinaykumar/2chainz-or-not">GitHub</a>
@@ -593,11 +592,12 @@ class App extends React.Component {
           backdrop="static"
           keyboard={false}
         >
-          <Modal.Body centered>
+          <Modal.Body centered="true">
             <div className="text-center d-flex float-none justify-content-center align-items-center align-content-center align-self-center">
               <img
                 className="rounded-circle d-flex justify-content-start yupimg"
                 src={Yup}
+                alt=""
               />
               <h1 className="yup">YUP!</h1>
             </div>
@@ -621,11 +621,12 @@ class App extends React.Component {
           backdrop="static"
           keyboard={false}
         >
-          <Modal.Body centered>
+          <Modal.Body centered="true">
             <div className="text-center d-flex float-none justify-content-center align-items-center align-content-center align-self-center">
               <img
                 className="rounded-circle d-flex justify-content-start yupimg"
                 src={Nope}
+                alt=""
               />
               <h1 className="yup">NOPE!</h1>
             </div>
@@ -649,12 +650,8 @@ class App extends React.Component {
           backdrop="static"
           keyboard={false}
         >
-          <Modal.Body centered>
+          <Modal.Body centered="true">
             <div className="text-center d-flex float-none justify-content-center align-items-center align-content-center align-self-center">
-              <img
-                className="rounded-circle d-flex justify-content-start yupimg"
-                src=""
-              />
               <h1 className="gameover">GAME OVER</h1>
             </div>
             <br />

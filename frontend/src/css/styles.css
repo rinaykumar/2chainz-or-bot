@@ -3,8 +3,6 @@
 
 body {
   padding-top: 30px;
-  /*justify-content: center;*/
-  /*display: flex;*/
 }
 
 .page {
@@ -43,42 +41,45 @@ body {
 }
 
 @media (min-width: 576px) {
-.yup {
-  padding-top: 10px;
-  font-size: 90px;
-  padding-left: 10px;
-}
+  .yup {
+    padding-top: 10px;
+    font-size: 90px;
+    padding-left: 10px;
+  }
 
-.gameover {
-  font-size: 60px;
-  font-family: 'Press Start 2P';
-}
-.heartimg {
-  height: 18px;
-}
-.chainimg{
-  height: 20px;
-  margin-bottom: 5px;
-  
-}
-.yupimg {
-  height: 120px;
-}
-}
+  .gameover {
+    font-size: 60px;
+    font-family: 'Press Start 2P';
+  }
 
+  .heartimg {
+    height: 18px;
+  }
 
+  .chainimg {
+    height: 20px;
+    margin-bottom: 5px;
+  }
+
+  .yupimg {
+    height: 120px;
+  }
+}
 
 @media (max-width: 575px) {
   .yup {
     font-size: 70px;
     padding-left: 10px;
   }
+
   .heartimg {
     height: 14px;
   }
-  .chainimg{
-    height: 16px
+
+  .chainimg {
+    height: 16px;
   }
+
   .gameover {
     font-size: 50px;
     font-family: 'Press Start 2P';
@@ -91,8 +92,7 @@ body {
   .yupimg {
     height: 100px;
   }
-  }
-
+}
 
 @media (min-width: 576px) {
   .page h2 {
@@ -101,20 +101,9 @@ body {
   }
 }
 
-.lineHover:hover{
+.lineHover:hover {
   box-shadow: 1px 1px 13px -2px rgba(30, 30, 60, 0.9);
 }
-
-/* .background {
-  min-height: 100%;
-  margin: 0 auto -10px;
-}
-
-html, body {
-  height: 100%;
-  margin: 0;
-} */
-
 
 @media (min-width: 576px) {
   .page p {
@@ -129,7 +118,6 @@ html, body {
   .page p {
     font-size: medium;
     font-weight: 100;
-    /* padding-top: 5px; */
     font-style: oblique;
     padding-bottom: 20px;
   }
@@ -196,7 +184,7 @@ html, body {
 @media (min-width: 401px) {
   .score-text {
     font-size: 17px;
-    color:goldenrod;
+    color: goldenrod;
     font-weight: bold;
   }
 }
@@ -204,7 +192,8 @@ html, body {
 @media (max-width: 400px) {
   .score-text {
     font-size: small;
-    color: grey;
+    color: goldenrod;
+    font-weight: bold;
   }
 }
 
@@ -245,17 +234,15 @@ html, body {
   margin-bottom: 0px;
 }
 
-
+.background {
+  padding-bottom:120px;
+}
 
 .footer {
-  height: 10px;
-  position: fixed; 
-  padding-top: 5px;
-  padding-bottom: 10px;
-  bottom: 0;
-  width: 100%;
-  height: 2rem;
-  visibility: visible;
+  position:fixed;
+  left:0;
+  bottom:0;
+  right:0;
 }
 
 .footer-text {
@@ -265,10 +252,8 @@ html, body {
 }
 
 .about {
-  /*visibility: hidden;*/
   padding-top: 30px;
   align-content: center;
-  /*position: relative;*/
 }
 
 .about-p {
@@ -290,77 +275,46 @@ html, body {
   }
 }
 
-@media (max-width: 768px) {
-  .blur-div {
-    -moz-filter: blur(5px);
-    -ms-filter: blur(5px);
-    filter: blur(5px);
-    /*width: 100%;*/
-    /*height: 100%;*/
-    /*position: absolute;*/
-    /*top: 0;*/
-    /*left: 10%;*/
-    /*z-index: 1;*/
-    /*margin: 0 auto;*/
-    /*justify-content: center;*/
-  }
+.blur-div {
+  -moz-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
 }
 
-@media (min-width: 769px) {
-  .blur-div {
-    -moz-filter: blur(5px);
-    -ms-filter: blur(5px);
-    filter: blur(5px);
-    /*width: 100%;*/
-    /*height: 100%;*/
-    /*position: absolute;*/
-    /*top: 0;*/
-    /*left: 20%;*/
-    /*z-index: 1;*/
-    /*margin: 0 auto;*/
-    /*justify-content: center;*/
-  }
-}
-
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .outer-div {
-    /*padding-top: 10px;*/
     position: relative;
-    /*vertical-align: middle;*/
-    /*align-items: center;*/
-    /*z-index: 2;*/
+    text-align: center;
     width: 80vw;
     height: 320px;
-    /*align-self: center;*/
     margin: auto;
     z-index: 1;
+  }
+
+  #start-button {
+    position: fixed;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
   }
 }
 
 @media (min-width: 501px) {
   .outer-div {
-    /*padding-top: 10px;*/
     position: relative;
-    /*vertical-align: middle;*/
-    /*align-items: center;*/
-    /*z-index: 2;*/
+    text-align: center;
     width: 600px;
     height: 320px;
-    /*align-self: center;*/
     margin: auto;
     z-index: 1;
   }
-}
 
-.button-div {
-  padding-bottom: 15px;
-  padding-top: 5px;
-}
-
-@media (max-width: 400px) {
   #start-button {
-    font-size: small;
-    display: table-cell;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
   }
 }
-
