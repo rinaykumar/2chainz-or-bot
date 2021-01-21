@@ -1,11 +1,11 @@
 import React from 'react';
 import './css/styles.css';
 import './css/bootstrap.min.css';
-import { Modal } from 'react-bootstrap';
+import { Modal, ProgressBar } from 'react-bootstrap';
 // Images
 import Header from './assets/img/header.jpg';
 import Yup from './assets/img/yup2.gif';
-import Nope from './assets/img/nope1.gif';
+import Nope from './assets/img/nope2.gif';
 import Line from './assets/img/line-img/line.jpg';
 import Line2 from './assets/img/line-img/line2.jpeg';
 import Line3 from './assets/img/line-img/line3.jpg';
@@ -18,7 +18,22 @@ import Line9 from './assets/img/line-img/line9.jpg';
 import Line10 from './assets/img/line-img/line10.jpg';
 import Line11 from './assets/img/line-img/line11.jpg';
 import Line12 from './assets/img/line-img/line12.jpeg';
-import Akon from './assets/img/akon.jpg';
+import Line13 from './assets/img/line-img/line13.jpg';
+import Line14 from './assets/img/line-img/line14.jpg';
+import Line15 from './assets/img/line-img/line15.jpg';
+import Line16 from './assets/img/line-img/line16.jpeg';
+import Line17 from './assets/img/line-img/line17.jpeg';
+import Line18 from './assets/img/line-img/line18.jpg';
+import Line19 from './assets/img/line-img/line19.jpg';
+import Line20 from './assets/img/line-img/line20.jpg';
+import Line21 from './assets/img/line-img/line21.jpg';
+import Line22 from './assets/img/line-img/line22.jpg';
+import Line23 from './assets/img/line-img/line23.jpg';
+import Line24 from './assets/img/line-img/line24.jpg';
+import Line25 from './assets/img/line-img/line25.png';
+import Akon from './assets/img/line-img/akon.jpg';
+import Heart from './assets/img/heart.png';
+import Chain from './assets/img/chain.png';
 
 class App extends React.Component {
   constructor(props) {
@@ -33,14 +48,18 @@ class App extends React.Component {
       allLines: [' ', ' ', ' '],
       show: false,
       show2: false,
+      show3: false,
       lineImg1: Line,
       lineImg2: Line2,
       lineImg3: Line3,
+      lives: 100,
     };
     this.showModal = this.showModal.bind(this);
     this.hideModal = this.hideModal.bind(this);
     this.showModal2 = this.showModal2.bind(this);
     this.hideModal2 = this.hideModal2.bind(this);
+    this.showModal3 = this.showModal3.bind(this);
+    this.hideModal3 = this.hideModal3.bind(this);
   }
 
   showModal() {
@@ -62,6 +81,21 @@ class App extends React.Component {
       show2: true,
     });
     document.getElementById('background').style.filter = 'blur(5px)';
+    this.setState({ lives: this.state.lives - 20 });
+    switch (this.state.lives) {
+      case 100:
+        document.getElementById('heart5').src = '';
+        break;
+      case 80:
+        document.getElementById('heart4').src = '';
+        break;
+      case 60:
+        document.getElementById('heart3').src = '';
+        break;
+      case 40:
+        document.getElementById('heart2').src = '';
+        break;
+    }
   }
 
   hideModal2() {
@@ -71,10 +105,42 @@ class App extends React.Component {
     document.getElementById('background').style.filter = 'blur(0)';
   }
 
+  showModal3() {
+    this.setState({ lives: 0 });
+    document.getElementById('heart1').src = '';
+    this.setState({
+      show3: true,
+    });
+    document.getElementById('background').style.filter = 'blur(5px)';
+  }
+
+  hideModal3() {
+    this.setState({
+      show3: false,
+    });
+    document.getElementById('background').style.filter = 'blur(0)';
+  }
+
   handleNext() {
     this.hideModal();
     this.hideModal2();
+    this.hideModal3();
     this.getLines();
+  }
+
+  handleAgain() {
+    this.hideModal();
+    this.hideModal2();
+    this.hideModal3();
+    this.setState({
+      lives: 100,
+      correct: 0,
+    });
+    document.getElementById('heart1').src = Heart;
+    document.getElementById('heart2').src = Heart;
+    document.getElementById('heart3').src = Heart;
+    document.getElementById('heart4').src = Heart;
+    document.getElementById('heart5').src = Heart;
   }
 
   getLines() {
@@ -89,23 +155,16 @@ class App extends React.Component {
 
   handleStart = () => {
     document.getElementById('blurdiv').style.filter = 'blur(0)';
-    document.getElementById('top-part').style.filter = 'blur(5px)';
+    //document.getElementById('top-part').style.filter = 'blur(5px)';
     document.getElementById('start-button').style.visibility = 'hidden';
     document.getElementById('lineBox').className += ' lineHover';
     document.getElementById('lineBox2').className += ' lineHover';
     document.getElementById('lineBox3').className += ' lineHover';
     this.getLines();
-    //this.timerFunc();
   };
 
-  timerFunc() {
-    this.interval = setInterval(() => {
-      this.getLines();
-    }, 10000);
-  }
-
   setLineImg1() {
-    let num = Math.floor(Math.random() * 12);
+    let num = Math.floor(Math.random() * 25);
     num++;
     switch (num) {
       case 1:
@@ -141,13 +200,52 @@ class App extends React.Component {
       case 11:
         this.setState({ lineImg1: Line11 });
         break;
-      default:
+      case 12:
         this.setState({ lineImg1: Line12 });
+        break;
+      case 13:
+        this.setState({ lineImg1: Line13 });
+        break;
+      case 14:
+        this.setState({ lineImg1: Line14 });
+        break;
+      case 15:
+        this.setState({ lineImg1: Line15 });
+        break;
+      case 16:
+        this.setState({ lineImg1: Line16 });
+        break;
+      case 17:
+        this.setState({ lineImg1: Line17 });
+        break;
+      case 18:
+        this.setState({ lineImg1: Line18 });
+        break;
+      case 19:
+        this.setState({ lineImg1: Line19 });
+        break;
+      case 20:
+        this.setState({ lineImg1: Line20 });
+        break;
+      case 21:
+        this.setState({ lineImg1: Line21 });
+        break;
+      case 22:
+        this.setState({ lineImg1: Line22 });
+        break;
+      case 23:
+        this.setState({ lineImg1: Line23 });
+        break;
+      case 24:
+        this.setState({ lineImg1: Line24 });
+        break;
+      default:
+        this.setState({ lineImg1: Line25 });
     }
   }
 
   setLineImg2() {
-    let num = Math.floor(Math.random() * 12);
+    let num = Math.floor(Math.random() * 25);
     num++;
     switch (num) {
       case 1:
@@ -183,13 +281,52 @@ class App extends React.Component {
       case 11:
         this.setState({ lineImg2: Line11 });
         break;
-      default:
+      case 12:
         this.setState({ lineImg2: Line12 });
+        break;
+      case 13:
+        this.setState({ lineImg2: Line13 });
+        break;
+      case 14:
+        this.setState({ lineImg2: Line14 });
+        break;
+      case 15:
+        this.setState({ lineImg2: Line15 });
+        break;
+      case 16:
+        this.setState({ lineImg2: Line16 });
+        break;
+      case 17:
+        this.setState({ lineImg2: Line17 });
+        break;
+      case 18:
+        this.setState({ lineImg2: Line18 });
+        break;
+      case 19:
+        this.setState({ lineImg2: Line19 });
+        break;
+      case 20:
+        this.setState({ lineImg2: Line20 });
+        break;
+      case 21:
+        this.setState({ lineImg2: Line21 });
+        break;
+      case 22:
+        this.setState({ lineImg2: Line22 });
+        break;
+      case 23:
+        this.setState({ lineImg2: Line23 });
+        break;
+      case 24:
+        this.setState({ lineImg2: Line24 });
+        break;
+      default:
+        this.setState({ lineImg2: Line25 });
     }
   }
 
   setLineImg3() {
-    let num = Math.floor(Math.random() * 12);
+    let num = Math.floor(Math.random() * 25);
     num++;
     switch (num) {
       case 1:
@@ -225,8 +362,47 @@ class App extends React.Component {
       case 11:
         this.setState({ lineImg3: Line11 });
         break;
-      default:
+      case 12:
         this.setState({ lineImg3: Line12 });
+        break;
+      case 13:
+        this.setState({ lineImg3: Line13 });
+        break;
+      case 14:
+        this.setState({ lineImg3: Line14 });
+        break;
+      case 15:
+        this.setState({ lineImg3: Line15 });
+        break;
+      case 16:
+        this.setState({ lineImg3: Line16 });
+        break;
+      case 17:
+        this.setState({ lineImg3: Line17 });
+        break;
+      case 18:
+        this.setState({ lineImg3: Line18 });
+        break;
+      case 19:
+        this.setState({ lineImg3: Line19 });
+        break;
+      case 20:
+        this.setState({ lineImg3: Line20 });
+        break;
+      case 21:
+        this.setState({ lineImg3: Line21 });
+        break;
+      case 22:
+        this.setState({ lineImg3: Line22 });
+        break;
+      case 23:
+        this.setState({ lineImg3: Line23 });
+        break;
+      case 24:
+        this.setState({ lineImg3: Line24 });
+        break;
+      default:
+        this.setState({ lineImg3: Line25 });
     }
   }
 
@@ -275,6 +451,8 @@ class App extends React.Component {
     }
     this.setLineImg2();
     this.setLineImg3();
+
+    console.log('Fake: ' + this.state.fakeLine);
   }
 
   counter(value) {
@@ -285,7 +463,12 @@ class App extends React.Component {
       this.setState({ correct: cor });
       this.showModal();
     } else {
-      this.showModal2();
+      console.log('Lives: ' + this.state.lives);
+      if (this.state.lives == 20) {
+        this.showModal3();
+      } else {
+        this.showModal2(); //////////////
+      }
     }
 
     this.setState({ total: tot });
@@ -295,10 +478,6 @@ class App extends React.Component {
   componentDidMount() {
     this.getLines();
     this.render();
-  }
-
-  componentWillUnmount() {
-    //clearInterval(this.interval);
   }
 
   render() {
@@ -322,28 +501,26 @@ class App extends React.Component {
         <div className="text-center blur-div" id="blurdiv">
           <section className="d-flex justify-content-center score">
             <div className="d-flex justify-content-between align-items-start align-items-md-start score-timer">
-              {/* <div className="">
-               <div
-                className="progress-bar"
-                aria-valuenow="0"
-                aria-valuemin="0"
-                aria-valuemax="10"
-              >
-                ROUND: 10
+              <div className="d-flex align-items-start heartdiv">
+                <img id="heart1" src={Heart} className="heartimg" />
+                <img id="heart2" src={Heart} className="heartimg" />
+                <img id="heart3" src={Heart} className="heartimg" />
+                <img id="heart4" src={Heart} className="heartimg" />
+                <img id="heart5" src={Heart} className="heartimg" />
               </div>
-               <p className="text-left d-flex justify-content-start score-text">
-              &nbsp; &nbsp; ROUND: {this.state.total+1}
-            </p>
-              
-            </div> */}
-              {/* <img src={Timer2} /> */}
 
-              <p className="text-left d-flex justify-content-start score-text">
+              <p className="score-text">
+                <img src={Chain} className="chainimg" /> {this.state.correct}
+              </p>
+
+              {/* <ProgressBar variant="danger" now={this.state.lives} /> */}
+
+              {/* <p className="text-left d-flex justify-content-start score-text">
                 &nbsp; &nbsp; ROUND: {this.state.total + 1}
-              </p>
-              <p className="text-right d-flex justify-content-end align-items-md-center score-text">
+              </p> */}
+              {/* <p className="text-right d-flex justify-content-end align-items-md-center score-text">
                 &nbsp; &nbsp; SCORE: {this.state.correct} CHAINZ
-              </p>
+              </p> */}
             </div>
           </section>
           <section className="text-center d-flex float-none justify-content-center align-items-center lines">
@@ -461,6 +638,34 @@ class App extends React.Component {
                 onClick={() => this.handleNext()}
               >
                 NEXT
+              </button>
+            </div>
+          </Modal.Body>
+        </Modal>
+        <Modal
+          show={this.state.show3}
+          onHide={this.hideModal3}
+          centered
+          backdrop="static"
+          keyboard={false}
+        >
+          <Modal.Body centered>
+            <div className="text-center d-flex float-none justify-content-center align-items-center align-content-center align-self-center">
+              <img
+                className="rounded-circle d-flex justify-content-start yupimg"
+                src=""
+              />
+              <h1 className="gameover">GAME OVER</h1>
+            </div>
+            <br />
+            <div className="text-center d-flex float-none justify-content-center align-items-center align-content-center align-self-center">
+              <button
+                className="btn btn-dark btn-lg text-uppercase text-center rounded-pill"
+                id="next-button"
+                type="button"
+                onClick={() => this.handleAgain()}
+              >
+                PLAY AGAIN
               </button>
             </div>
           </Modal.Body>
