@@ -39,6 +39,7 @@ import Line30 from './assets/img/line-img/line30.jpeg';
 import Akon from './assets/img/line-img/akon.jpg';
 import Heart from './assets/img/heart.png';
 import Chain from './assets/img/chain.png';
+import Loading from './assets/img/loading.gif';
 
 class App extends React.Component {
   constructor(props) {
@@ -98,7 +99,7 @@ class App extends React.Component {
         document.getElementById('heart2').src = '';
         break;
       default:
-        break;  
+        break;
     }
   }
 
@@ -144,6 +145,13 @@ class App extends React.Component {
     document.getElementById('heart2').src = Heart;
     document.getElementById('heart3').src = Heart;
     document.getElementById('heart4').src = Heart;
+    document.getElementById('outer-div').style.visibility = 'hidden';
+    document.getElementById('loading').style.visibility = 'visible';
+
+    setTimeout(function () {
+      document.getElementById('outer-div').style.visibility = 'visible';
+      document.getElementById('loading').style.visibility = 'hidden';
+    }, 1300);
   }
 
   getLines() {
@@ -265,7 +273,7 @@ class App extends React.Component {
         break;
       case 8:
         this.setState({ lineImg3: Line28 });
-        break;  
+        break;
       case 9:
         this.setState({ lineImg3: Line29 });
         break;
@@ -351,179 +359,185 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="background" id="background">
-        <section className="text-center page title" id="top-part">
-          <div className="d-flex d-lg-flex justify-content-center align-items-center justify-content-md-center align-items-md-center align-items-lg-center align-items-xl-center header-div">
-            <img
-              className="rounded-circle float-none header-img"
-              src={Header}
-              height="70px"
-              alt=""
-            />
-            <h1>&nbsp;2CHAINZ OR NOT</h1>
-          </div>
-          <h2>2 lines are real 2Chainz lyrics</h2>
-          <h2 className="fake">1 is fake from a bot&nbsp;</h2>
-          <div>
-            <p className="fake-line">Can you spot the fake line?</p>
-          </div>
-        </section>
-        <div className="outer-div text-center">
-          <button
-            className="btn btn-dark btn-lg text-uppercase text-center rounded-pill"
-            id="start-button"
-            type="button"
-            onClick={() => this.handleStart()}
-          >
-            START
-          </button>
-          <div className="text-center blur-div" id="blurdiv">
-            <section className="d-flex justify-content-center score">
-              <div className="d-flex justify-content-between align-items-start align-items-md-start score-timer">
-                <div className="d-flex align-items-start heartdiv">
-                  <img id="heart1" src={Heart} className="heartimg" alt=""/>
-                  <img id="heart2" src={Heart} className="heartimg" alt=""/>
-                  <img id="heart3" src={Heart} className="heartimg" alt=""/>
-                  <img id="heart4" src={Heart} className="heartimg" alt=""/>
-                </div>
-                <p className="score-text">
-                {this.state.correct} <img src={Chain} className="chainimg" alt=""/>
-                </p>
-              </div>
-            </section>
-            <section className="text-center d-flex float-none justify-content-center align-items-center lines">
-              <div className="card text-center d-flex justify-content-center align-items-center align-content-center align-self-center">
-                <div
-                  id="lineBox"
-                  className="d-flex align-items-center line1"
-                  onClick={() => this.counter(0)}
-                >
-                  <img
-                    className="rounded-circle d-flex justify-content-start"
-                    src={this.state.lineImg1}
-                    height="70px"
-                    alt=""
-                  />
-                  <p className="text-left line-text">
-                    "{this.state.allLines[0]}"
-                  </p>
-                </div>
-                <div
-                  id="lineBox2"
-                  className="d-flex align-items-center line1"
-                  onClick={() => this.counter(1)}
-                >
-                  <img
-                    className="rounded-circle d-flex justify-content-start"
-                    src={this.state.lineImg2}
-                    height="70px"
-                    alt=""
-                  />
-                  <p className="text-left line-text">
-                    "{this.state.allLines[1]}"
-                  </p>
-                </div>
-                <div
-                  id="lineBox3"
-                  className="d-flex align-items-center line1"
-                  onClick={() => this.counter(2)}
-                >
-                  <img
-                    className="rounded-circle d-flex justify-content-start"
-                    src={this.state.lineImg3}
-                    height="70px"
-                    alt=""
-                  />
-                  <p className="text-left line-text">
-                    "{this.state.allLines[2]}"
-                  </p>
-                </div>
-              </div>
-            </section>
-          </div>
+      <div>
+        <div className="loading" id="loading">
+          <img src={Loading} height="200px" />
         </div>
-        <Modal
-          show={this.state.show}
-          onHide={this.hideModal}
-          centered
-          backdrop="static"
-          keyboard={false}
-        >
-          <Modal.Body centered="true">
-            <div className="text-center d-flex float-none justify-content-center align-items-center align-content-center align-self-center">
+        <div className="background" id="background">
+          <section className="text-center page title" id="top-part">
+            <div className="d-flex d-lg-flex justify-content-center align-items-center justify-content-md-center align-items-md-center align-items-lg-center align-items-xl-center header-div">
               <img
-                className="rounded-circle d-flex justify-content-start yupimg"
-                src={Yup}
+                className="rounded-circle float-none header-img"
+                src={Header}
+                height="70px"
                 alt=""
               />
-              <h1 className="yup">YUP!</h1>
+              <h1>&nbsp;2CHAINZ OR NOT</h1>
             </div>
-            <br />
-            <div className="text-center d-flex float-none justify-content-center align-items-center align-content-center align-self-center">
-              <button
-                className="btn btn-dark btn-lg text-uppercase text-center rounded-pill"
-                id="next-button"
-                type="button"
-                onClick={() => this.handleNext()}
-              >
-                NEXT
-              </button>
+            <h2>2 lines are real 2Chainz lyrics</h2>
+            <h2 className="fake">1 is fake from a bot&nbsp;</h2>
+            <div>
+              <p className="fake-line">Can you spot the fake line?</p>
             </div>
-          </Modal.Body>
-        </Modal>
-        <Modal
-          show={this.state.show2}
-          onHide={this.hideModal2}
-          centered
-          backdrop="static"
-          keyboard={false}
-        >
-          <Modal.Body centered="true">
-            <div className="text-center d-flex float-none justify-content-center align-items-center align-content-center align-self-center">
-              <img
-                className="rounded-circle d-flex justify-content-start yupimg"
-                src={Nope}
-                alt=""
-              />
-              <h1 className="yup">NOPE!</h1>
+          </section>
+          <div className="outer-div text-center" id="outer-div">
+            <button
+              className="btn btn-dark btn-lg text-uppercase text-center rounded-pill"
+              id="start-button"
+              type="button"
+              onClick={() => this.handleStart()}
+            >
+              START
+            </button>
+            <div className="text-center blur-div" id="blurdiv">
+              <section className="d-flex justify-content-center score">
+                <div className="d-flex justify-content-between align-items-start align-items-md-start score-timer">
+                  <div className="d-flex align-items-start heartdiv">
+                    <img id="heart1" src={Heart} className="heartimg" alt="" />
+                    <img id="heart2" src={Heart} className="heartimg" alt="" />
+                    <img id="heart3" src={Heart} className="heartimg" alt="" />
+                    <img id="heart4" src={Heart} className="heartimg" alt="" />
+                  </div>
+                  <p className="score-text">
+                    {this.state.correct}{' '}
+                    <img src={Chain} className="chainimg" alt="" />
+                  </p>
+                </div>
+              </section>
+              <section className="text-center d-flex float-none justify-content-center align-items-center lines">
+                <div className="card text-center d-flex justify-content-center align-items-center align-content-center align-self-center">
+                  <div
+                    id="lineBox"
+                    className="d-flex align-items-center line1"
+                    onClick={() => this.counter(0)}
+                  >
+                    <img
+                      className="rounded-circle d-flex justify-content-start"
+                      src={this.state.lineImg1}
+                      height="70px"
+                      alt=""
+                    />
+                    <p className="text-left line-text">
+                      "{this.state.allLines[0]}"
+                    </p>
+                  </div>
+                  <div
+                    id="lineBox2"
+                    className="d-flex align-items-center line1"
+                    onClick={() => this.counter(1)}
+                  >
+                    <img
+                      className="rounded-circle d-flex justify-content-start"
+                      src={this.state.lineImg2}
+                      height="70px"
+                      alt=""
+                    />
+                    <p className="text-left line-text">
+                      "{this.state.allLines[1]}"
+                    </p>
+                  </div>
+                  <div
+                    id="lineBox3"
+                    className="d-flex align-items-center line1"
+                    onClick={() => this.counter(2)}
+                  >
+                    <img
+                      className="rounded-circle d-flex justify-content-start"
+                      src={this.state.lineImg3}
+                      height="70px"
+                      alt=""
+                    />
+                    <p className="text-left line-text">
+                      "{this.state.allLines[2]}"
+                    </p>
+                  </div>
+                </div>
+              </section>
             </div>
-            <br />
-            <div className="text-center d-flex float-none justify-content-center align-items-center align-content-center align-self-center">
-              <button
-                className="btn btn-dark btn-lg text-uppercase text-center rounded-pill"
-                id="next-button"
-                type="button"
-                onClick={() => this.handleNext()}
-              >
-                NEXT
-              </button>
-            </div>
-          </Modal.Body>
-        </Modal>
-        <Modal
-          show={this.state.show3}
-          onHide={this.hideModal3}
-          centered
-          backdrop="static"
-          keyboard={false}
-        >
-          <Modal.Body centered="true">
-            <div className="text-center d-flex float-none justify-content-center align-items-center align-content-center align-self-center">
-              <h1 className="gameover">GAME OVER</h1>
-            </div>
-            <br />
-            <div className="text-center d-flex float-none justify-content-center align-items-center align-content-center align-self-center">
-              <button
-                className="btn btn-dark btn-lg text-uppercase text-center rounded-pill"
-                id="next-button"
-                type="button"
-                onClick={() => this.handleAgain()}
-              >
-                PLAY AGAIN
-              </button>
-            </div>
-          </Modal.Body>
-        </Modal>
+          </div>
+          <Modal
+            show={this.state.show}
+            onHide={this.hideModal}
+            centered
+            backdrop="static"
+            keyboard={false}
+          >
+            <Modal.Body centered="true">
+              <div className="text-center d-flex float-none justify-content-center align-items-center align-content-center align-self-center">
+                <img
+                  className="rounded-circle d-flex justify-content-start yupimg"
+                  src={Yup}
+                  alt=""
+                />
+                <h1 className="yup">YUP!</h1>
+              </div>
+              <br />
+              <div className="text-center d-flex float-none justify-content-center align-items-center align-content-center align-self-center">
+                <button
+                  className="btn btn-dark btn-lg text-uppercase text-center rounded-pill"
+                  id="next-button"
+                  type="button"
+                  onClick={() => this.handleNext()}
+                >
+                  NEXT
+                </button>
+              </div>
+            </Modal.Body>
+          </Modal>
+          <Modal
+            show={this.state.show2}
+            onHide={this.hideModal2}
+            centered
+            backdrop="static"
+            keyboard={false}
+          >
+            <Modal.Body centered="true">
+              <div className="text-center d-flex float-none justify-content-center align-items-center align-content-center align-self-center">
+                <img
+                  className="rounded-circle d-flex justify-content-start yupimg"
+                  src={Nope}
+                  alt=""
+                />
+                <h1 className="yup">NOPE!</h1>
+              </div>
+              <br />
+              <div className="text-center d-flex float-none justify-content-center align-items-center align-content-center align-self-center">
+                <button
+                  className="btn btn-dark btn-lg text-uppercase text-center rounded-pill"
+                  id="next-button"
+                  type="button"
+                  onClick={() => this.handleNext()}
+                >
+                  NEXT
+                </button>
+              </div>
+            </Modal.Body>
+          </Modal>
+          <Modal
+            show={this.state.show3}
+            onHide={this.hideModal3}
+            centered
+            backdrop="static"
+            keyboard={false}
+          >
+            <Modal.Body centered="true">
+              <div className="text-center d-flex float-none justify-content-center align-items-center align-content-center align-self-center">
+                <h1 className="gameover">GAME OVER</h1>
+              </div>
+              <br />
+              <div className="text-center d-flex float-none justify-content-center align-items-center align-content-center align-self-center">
+                <button
+                  className="btn btn-dark btn-lg text-uppercase text-center rounded-pill"
+                  id="next-button"
+                  type="button"
+                  onClick={() => this.handleAgain()}
+                >
+                  PLAY AGAIN
+                </button>
+              </div>
+            </Modal.Body>
+          </Modal>
+        </div>
       </div>
     );
   }
