@@ -81,18 +81,15 @@ class App extends React.Component {
       show2: true,
     });
     document.getElementById('background').style.filter = 'blur(5px)';
-    this.setState({ lives: this.state.lives - 20 });
+    this.setState({ lives: this.state.lives - 25 });
     switch (this.state.lives) {
       case 100:
-        document.getElementById('heart5').src = '';
-        break;
-      case 80:
         document.getElementById('heart4').src = '';
         break;
-      case 60:
+      case 75:
         document.getElementById('heart3').src = '';
         break;
-      case 40:
+      case 50:
         document.getElementById('heart2').src = '';
         break;
       default:
@@ -142,7 +139,6 @@ class App extends React.Component {
     document.getElementById('heart2').src = Heart;
     document.getElementById('heart3').src = Heart;
     document.getElementById('heart4').src = Heart;
-    document.getElementById('heart5').src = Heart;
   }
 
   getLines() {
@@ -469,7 +465,7 @@ class App extends React.Component {
       this.showModal();
     } else {
       console.log('Lives: ' + this.state.lives);
-      if (this.state.lives === 20) {
+      if (this.state.lives === 25) {
         this.showModal3();
       } else {
         this.showModal2();
@@ -521,7 +517,6 @@ class App extends React.Component {
                   <img id="heart2" src={Heart} className="heartimg" alt=""/>
                   <img id="heart3" src={Heart} className="heartimg" alt=""/>
                   <img id="heart4" src={Heart} className="heartimg" alt=""/>
-                  <img id="heart5" src={Heart} className="heartimg" alt=""/>
                 </div>
                 <p className="score-text">
                 {this.state.correct} <img src={Chain} className="chainimg" alt=""/>
