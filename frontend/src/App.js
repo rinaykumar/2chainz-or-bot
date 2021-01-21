@@ -158,7 +158,6 @@ class App extends React.Component {
 
   handleStart = () => {
     document.getElementById('blurdiv').style.filter = 'blur(0)';
-    //document.getElementById('top-part').style.filter = 'blur(5px)';
     document.getElementById('start-button').style.visibility = 'hidden';
     document.getElementById('lineBox').className += ' lineHover';
     document.getElementById('lineBox2').className += ' lineHover';
