@@ -256,11 +256,11 @@ body {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 1px;
+  height: 2rem;
  }
 
 .footer-text {
-  font-size: xx-small;
+  font-size: x-small;
   color: lightgrey;
 }
 
