@@ -31,6 +31,11 @@ import Line22 from './assets/img/line-img/line22.jpg';
 import Line23 from './assets/img/line-img/line23.jpg';
 import Line24 from './assets/img/line-img/line24.jpg';
 import Line25 from './assets/img/line-img/line25.png';
+import Line26 from './assets/img/line-img/line26.jpeg';
+import Line27 from './assets/img/line-img/line27.jpeg';
+import Line28 from './assets/img/line-img/line28.jpeg';
+import Line29 from './assets/img/line-img/line29.jpeg';
+import Line30 from './assets/img/line-img/line30.jpeg';
 import Akon from './assets/img/line-img/akon.jpg';
 import Heart from './assets/img/heart.png';
 import Chain from './assets/img/chain.png';
@@ -162,7 +167,7 @@ class App extends React.Component {
   };
 
   setLineImg1() {
-    let num = Math.floor(Math.random() * 25);
+    let num = Math.floor(Math.random() * 10);
     num++;
     switch (num) {
       case 1:
@@ -192,217 +197,81 @@ class App extends React.Component {
       case 9:
         this.setState({ lineImg1: Line9 });
         break;
-      case 10:
-        this.setState({ lineImg1: Line10 });
-        break;
-      case 11:
-        this.setState({ lineImg1: Line11 });
-        break;
-      case 12:
-        this.setState({ lineImg1: Line12 });
-        break;
-      case 13:
-        this.setState({ lineImg1: Line13 });
-        break;
-      case 14:
-        this.setState({ lineImg1: Line14 });
-        break;
-      case 15:
-        this.setState({ lineImg1: Line15 });
-        break;
-      case 16:
-        this.setState({ lineImg1: Line16 });
-        break;
-      case 17:
-        this.setState({ lineImg1: Line17 });
-        break;
-      case 18:
-        this.setState({ lineImg1: Line18 });
-        break;
-      case 19:
-        this.setState({ lineImg1: Line19 });
-        break;
-      case 20:
-        this.setState({ lineImg1: Line20 });
-        break;
-      case 21:
-        this.setState({ lineImg1: Line21 });
-        break;
-      case 22:
-        this.setState({ lineImg1: Line22 });
-        break;
-      case 23:
-        this.setState({ lineImg1: Line23 });
-        break;
-      case 24:
-        this.setState({ lineImg1: Line24 });
-        break;
       default:
-        this.setState({ lineImg1: Line25 });
+        this.setState({ lineImg1: Line10 });
         break;
     }
   }
 
   setLineImg2() {
-    let num = Math.floor(Math.random() * 25);
+    let num = Math.floor(Math.random() * 10);
     num++;
     switch (num) {
       case 1:
-        this.setState({ lineImg2: Line });
-        break;
-      case 2:
-        this.setState({ lineImg2: Line2 });
-        break;
-      case 3:
-        this.setState({ lineImg2: Line3 });
-        break;
-      case 4:
-        this.setState({ lineImg2: Line4 });
-        break;
-      case 5:
-        this.setState({ lineImg2: Line5 });
-        break;
-      case 6:
-        this.setState({ lineImg2: Line6 });
-        break;
-      case 7:
-        this.setState({ lineImg2: Line7 });
-        break;
-      case 8:
-        this.setState({ lineImg2: Line8 });
-        break;
-      case 9:
-        this.setState({ lineImg2: Line9 });
-        break;
-      case 10:
-        this.setState({ lineImg2: Line10 });
-        break;
-      case 11:
         this.setState({ lineImg2: Line11 });
         break;
-      case 12:
+      case 2:
         this.setState({ lineImg2: Line12 });
         break;
-      case 13:
+      case 3:
         this.setState({ lineImg2: Line13 });
         break;
-      case 14:
+      case 4:
         this.setState({ lineImg2: Line14 });
         break;
-      case 15:
+      case 5:
         this.setState({ lineImg2: Line15 });
         break;
-      case 16:
+      case 6:
         this.setState({ lineImg2: Line16 });
         break;
-      case 17:
+      case 7:
         this.setState({ lineImg2: Line17 });
         break;
-      case 18:
+      case 8:
         this.setState({ lineImg2: Line18 });
         break;
-      case 19:
+      case 9:
         this.setState({ lineImg2: Line19 });
         break;
-      case 20:
-        this.setState({ lineImg2: Line20 });
-        break;
-      case 21:
-        this.setState({ lineImg2: Line21 });
-        break;
-      case 22:
-        this.setState({ lineImg2: Line22 });
-        break;
-      case 23:
-        this.setState({ lineImg2: Line23 });
-        break;
-      case 24:
-        this.setState({ lineImg2: Line24 });
-        break;
       default:
-        this.setState({ lineImg2: Line25 });
-        break;
+        this.setState({ lineImg2: Line20 });
     }
   }
 
   setLineImg3() {
-    let num = Math.floor(Math.random() * 25);
+    let num = Math.floor(Math.random() * 10);
     num++;
     switch (num) {
       case 1:
-        this.setState({ lineImg3: Line });
-        break;
-      case 2:
-        this.setState({ lineImg3: Line2 });
-        break;
-      case 3:
-        this.setState({ lineImg3: Line3 });
-        break;
-      case 4:
-        this.setState({ lineImg3: Line4 });
-        break;
-      case 5:
-        this.setState({ lineImg3: Line5 });
-        break;
-      case 6:
-        this.setState({ lineImg3: Line6 });
-        break;
-      case 7:
-        this.setState({ lineImg3: Line7 });
-        break;
-      case 8:
-        this.setState({ lineImg3: Line8 });
-        break;
-      case 9:
-        this.setState({ lineImg3: Line9 });
-        break;
-      case 10:
-        this.setState({ lineImg3: Line10 });
-        break;
-      case 11:
-        this.setState({ lineImg3: Line11 });
-        break;
-      case 12:
-        this.setState({ lineImg3: Line12 });
-        break;
-      case 13:
-        this.setState({ lineImg3: Line13 });
-        break;
-      case 14:
-        this.setState({ lineImg3: Line14 });
-        break;
-      case 15:
-        this.setState({ lineImg3: Line15 });
-        break;
-      case 16:
-        this.setState({ lineImg3: Line16 });
-        break;
-      case 17:
-        this.setState({ lineImg3: Line17 });
-        break;
-      case 18:
-        this.setState({ lineImg3: Line18 });
-        break;
-      case 19:
-        this.setState({ lineImg3: Line19 });
-        break;
-      case 20:
-        this.setState({ lineImg3: Line20 });
-        break;
-      case 21:
         this.setState({ lineImg3: Line21 });
         break;
-      case 22:
+      case 2:
         this.setState({ lineImg3: Line22 });
         break;
-      case 23:
+      case 3:
         this.setState({ lineImg3: Line23 });
         break;
-      case 24:
+      case 4:
         this.setState({ lineImg3: Line24 });
         break;
-      default:
+      case 5:
         this.setState({ lineImg3: Line25 });
+        break;
+      case 6:
+        this.setState({ lineImg3: Line26 });
+        break;
+      case 7:
+        this.setState({ lineImg3: Line27 });
+        break;
+      case 8:
+        this.setState({ lineImg3: Line28 });
+        break;  
+      case 9:
+        this.setState({ lineImg3: Line29 });
+        break;
+      default:
+        this.setState({ lineImg3: Line30 });
         break;
     }
   }
