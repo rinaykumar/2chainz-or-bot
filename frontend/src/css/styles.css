@@ -56,7 +56,7 @@ body {
   }
 
   .heartimg {
-    height: 18px;
+    height: 18px; 
   }
 
   .chainimg {
@@ -164,6 +164,7 @@ body {
   height: 80px;
   margin-bottom: 15px;
   padding-left: 4px;
+  padding-right: 4px;
 }
 
 @media (max-width: 768px) {
@@ -206,7 +207,7 @@ body {
   height: 13px;
 }
 
-@media (min-width: 400px) {
+@media (min-width: 481px) {
   .line-text {
     font-size: large;
     font-family: Catamaran;
@@ -219,9 +220,9 @@ body {
   }
 }
 
-@media (max-width: 399px) {
+@media (max-width: 480px) {
   .line-text {
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 400;
     font-style: oblique;
     padding-top: 16px;
