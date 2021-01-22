@@ -9,11 +9,11 @@ sys.path.append("/Library/Python/3.7/site-packages")
 corpus = open('2chainz.txt').read()
 corpus = markovify.NewlineText(corpus, state_size=5)
 
-app = Flask(__name__, static_folder='./frontend/build', static_url_path='/')
+app = Flask(__name__, static_folder='../frontend/build', static_url_path='/')
 
 @app.route('/')
 def index():
-    return app.send_static_file('index.html')
+   return app.send_static_file('index.html')
 
 @app.route('/line')
 def generate_line():
@@ -35,4 +35,4 @@ def get_real_line():
     return {'random': o}
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=80)
+    app.run(host='0.0.0.0', port=80)
