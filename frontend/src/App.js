@@ -7,7 +7,7 @@ import Header from './assets/img/header.jpg';
 import Yup from './assets/img/yup2.gif';
 import Nope from './assets/img/nope2.gif';
 import Line from './assets/img/line-img/line.jpg';
-import Line2 from './assets/img/line-img/line2.jpeg';
+import Line2 from './assets/img/line-img/line2.jpg';
 import Line3 from './assets/img/line-img/line3.jpg';
 import Line4 from './assets/img/line-img/line4.jpg';
 import Line5 from './assets/img/line-img/line5.jpg';
@@ -17,12 +17,12 @@ import Line8 from './assets/img/line-img/line8.jpg';
 import Line9 from './assets/img/line-img/line9.jpg';
 import Line10 from './assets/img/line-img/line10.jpg';
 import Line11 from './assets/img/line-img/line11.jpg';
-import Line12 from './assets/img/line-img/line12.jpeg';
+import Line12 from './assets/img/line-img/line12.jpg';
 import Line13 from './assets/img/line-img/line13.jpg';
 import Line14 from './assets/img/line-img/line14.jpg';
 import Line15 from './assets/img/line-img/line15.jpg';
-import Line16 from './assets/img/line-img/line16.jpeg';
-import Line17 from './assets/img/line-img/line17.jpeg';
+import Line16 from './assets/img/line-img/line16.jpg';
+import Line17 from './assets/img/line-img/line17.jpg';
 import Line18 from './assets/img/line-img/line18.jpg';
 import Line19 from './assets/img/line-img/line19.jpg';
 import Line20 from './assets/img/line-img/line20.jpg';
@@ -30,20 +30,17 @@ import Line21 from './assets/img/line-img/line21.jpg';
 import Line22 from './assets/img/line-img/line22.jpg';
 import Line23 from './assets/img/line-img/line23.jpg';
 import Line24 from './assets/img/line-img/line24.jpg';
-import Line25 from './assets/img/line-img/line25.png';
-import Line26 from './assets/img/line-img/line26.jpeg';
-import Line27 from './assets/img/line-img/line27.jpeg';
-import Line28 from './assets/img/line-img/line28.jpeg';
-import Line29 from './assets/img/line-img/line29.jpeg';
-import Line30 from './assets/img/line-img/line30.jpeg';
+import Line25 from './assets/img/line-img/line25.jpg';
+import Line26 from './assets/img/line-img/line26.jpg';
+import Line27 from './assets/img/line-img/line27.jpg';
+import Line28 from './assets/img/line-img/line28.jpg';
+import Line29 from './assets/img/line-img/line29.jpg';
+import Line30 from './assets/img/line-img/line30.jpg';
 import Akon from './assets/img/line-img/akon.jpg';
 import Heart from './assets/img/heart.png';
 import NoHeart from './assets/img/noheart.png';
 import Chain from './assets/img/chain.png';
 import Loading from './assets/img/loading.gif';
-import Circle1 from './assets/img/line-img/circle1.png';
-import Circle2 from './assets/img/line-img/circle2.png';
-import Circle3 from './assets/img/line-img/circle3.png';
 
 class App extends React.Component {
   constructor(props) {
@@ -59,9 +56,9 @@ class App extends React.Component {
       show: false,
       show2: false,
       show3: false,
-      lineImg1: Circle1,
-      lineImg2: Circle2,
-      lineImg3: Circle3,
+      lineImg1: Line,
+      lineImg2: Line2,
+      lineImg3: Line3,
       lives: 100,
     };
     this.showModal = this.showModal.bind(this);
