@@ -41,6 +41,7 @@ import Heart from './assets/img/heart.png';
 import NoHeart from './assets/img/noheart.png';
 import Chain from './assets/img/chain.png';
 import Loading from './assets/img/loading.gif';
+import Circle from './assets/img/circle.png';
 
 class App extends React.Component {
   constructor(props) {
@@ -432,7 +433,8 @@ class App extends React.Component {
                   >
                     <img
                       className="rounded-circle d-flex justify-content-start"
-                      src={this.state.lineImg1}
+                      // src={this.state.lineImg1}
+                      src={Circle}
                       height="70px"
                       alt=""
                       id="lineimage1"
@@ -448,7 +450,8 @@ class App extends React.Component {
                   >
                     <img
                       className="rounded-circle d-flex justify-content-start"
-                      src={this.state.lineImg2}
+                      // src={this.state.lineImg2}
+                      src={Circle}
                       height="70px"
                       alt=""
                       id="lineimage2"
@@ -464,7 +467,8 @@ class App extends React.Component {
                   >
                     <img
                       className="rounded-circle d-flex justify-content-start"
-                      src={this.state.lineImg3}
+                      // src={this.state.lineImg3}
+                      src={Circle}
                       height="70px"
                       alt=""
                       id="lineimage3"
