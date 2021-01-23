@@ -432,7 +432,7 @@ class App extends React.Component {
                     onClick={() => this.counter(0)}
                   >
                     <img
-                      className="rounded-circle d-flex justify-content-start"
+                      className="d-flex justify-content-start"
                       // src={this.state.lineImg1}
                       src={Circle}
                       height="70px"
@@ -449,7 +449,7 @@ class App extends React.Component {
                     onClick={() => this.counter(1)}
                   >
                     <img
-                      className="rounded-circle d-flex justify-content-start"
+                      className="d-flex justify-content-start"
                       // src={this.state.lineImg2}
                       src={Circle}
                       height="70px"
@@ -466,7 +466,7 @@ class App extends React.Component {
                     onClick={() => this.counter(2)}
                   >
                     <img
-                      className="rounded-circle d-flex justify-content-start"
+                      className="d-flex justify-content-start"
                       // src={this.state.lineImg3}
                       src={Circle}
                       height="70px"
