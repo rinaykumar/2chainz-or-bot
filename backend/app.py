@@ -7,7 +7,7 @@ import os.path
 sys.path.append("/Library/Python/3.7/site-packages")
 
 corpus = open('2chainz.txt').read()
-corpus = markovify.NewlineText(corpus, state_size=5)
+corpus = markovify.NewlineText(corpus, state_size=3)
 
 app = Flask(__name__, static_folder='../frontend/build', static_url_path='/')
 
@@ -17,7 +17,7 @@ def index():
 
 @app.route('/line')
 def generate_line():
-    line = corpus.make_short_sentence(70, tries=300, max_overlap_ratio=40)
+    line = corpus.make_short_sentence(70, tries=300)
     return {'line': line}
 
 @app.route('/random')

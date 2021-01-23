@@ -138,10 +138,12 @@ class App extends React.Component {
     this.hideModal();
     this.hideModal2();
     this.hideModal3();
+    
     this.setState({
       lives: 100,
       correct: 0,
     });
+
     document.getElementById('heart1').src = Heart;
     document.getElementById('heart2').src = Heart;
     document.getElementById('heart3').src = Heart;
@@ -149,10 +151,12 @@ class App extends React.Component {
     document.getElementById('outer-div').style.visibility = 'hidden';
     document.getElementById('loading').style.visibility = 'visible';
 
+    this.getLines();
+
     setTimeout(function () {
       document.getElementById('outer-div').style.visibility = 'visible';
       document.getElementById('loading').style.visibility = 'hidden';
-    }, 1300);
+    }, 1200);
   }
 
   getLines() {
@@ -171,6 +175,15 @@ class App extends React.Component {
     document.getElementById('lineBox').className += ' lineHover';
     document.getElementById('lineBox2').className += ' lineHover';
     document.getElementById('lineBox3').className += ' lineHover';
+
+    document.getElementById('outer-div').style.visibility = 'hidden';
+    document.getElementById('loading').style.visibility = 'visible';
+
+    setTimeout(function () {
+      document.getElementById('outer-div').style.visibility = 'visible';
+      document.getElementById('loading').style.visibility = 'hidden';
+    }, 1200);
+
     this.getLines();
   };
 
@@ -350,7 +363,7 @@ class App extends React.Component {
     }
 
     this.setState({ total: tot });
-    this.getLines();
+    //this.getLines();
   }
 
   componentDidMount() {
