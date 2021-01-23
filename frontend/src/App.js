@@ -41,7 +41,9 @@ import Heart from './assets/img/heart.png';
 import NoHeart from './assets/img/noheart.png';
 import Chain from './assets/img/chain.png';
 import Loading from './assets/img/loading.gif';
-import Circle from './assets/img/circle.png';
+import Circle1 from './assets/img/line-img/circle1.png';
+import Circle2 from './assets/img/line-img/circle2.png';
+import Circle3 from './assets/img/line-img/circle3.png';
 
 class App extends React.Component {
   constructor(props) {
@@ -57,9 +59,9 @@ class App extends React.Component {
       show: false,
       show2: false,
       show3: false,
-      lineImg1: Line,
-      lineImg2: Line2,
-      lineImg3: Line3,
+      lineImg1: Circle1,
+      lineImg2: Circle2,
+      lineImg3: Circle3,
       lives: 100,
     };
     this.showModal = this.showModal.bind(this);
@@ -433,8 +435,7 @@ class App extends React.Component {
                   >
                     <img
                       className="d-flex justify-content-start"
-                      // src={this.state.lineImg1}
-                      src={Circle}
+                      src={this.state.lineImg1}
                       height="70px"
                       alt=""
                       id="lineimage1"
@@ -450,8 +451,7 @@ class App extends React.Component {
                   >
                     <img
                       className="d-flex justify-content-start"
-                      // src={this.state.lineImg2}
-                      src={Circle}
+                      src={this.state.lineImg2}
                       height="70px"
                       alt=""
                       id="lineimage2"
@@ -467,8 +467,7 @@ class App extends React.Component {
                   >
                     <img
                       className="d-flex justify-content-start"
-                      // src={this.state.lineImg3}
-                      src={Circle}
+                      src={this.state.lineImg3}
                       height="70px"
                       alt=""
                       id="lineimage3"
