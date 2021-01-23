@@ -342,27 +342,28 @@ footer {
   -ms-filter: blur(5px);
   filter: blur(5px);
 }
+
 @media (min-width: 1500px) {
-.blur-div {
-  -webkit-filter: blur(5px);
-  -moz-filter: blur(5px);
-  -o-filter: blur(5px);
-  -ms-filter: blur(5px);
-  position: fixed;
-  filter: blur(5px);
-  left: 50%;
+  .blur-div {
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    position: fixed;
+    filter: blur(5px);
+    left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-}
-.loading {
-  visibility: hidden;
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
+  }
+  .loading {
+    visibility: hidden;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
 }
 
 .loading {
@@ -413,4 +414,28 @@ footer {
     transform: translate(-50%, -50%);
     z-index: 2;
   }
+}
+
+#lineimage1 {
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+
+#lineimage2 {
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+
+#lineimage3 {
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
 }

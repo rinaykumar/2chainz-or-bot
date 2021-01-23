@@ -177,9 +177,11 @@ class App extends React.Component {
     document.getElementById('lineBox').className += ' lineHover';
     document.getElementById('lineBox2').className += ' lineHover';
     document.getElementById('lineBox3').className += ' lineHover';
-
     document.getElementById('outer-div').style.visibility = 'hidden';
     document.getElementById('loading').style.visibility = 'visible';
+    document.getElementById('lineimage1').style.filter = 'blur(0)';
+    document.getElementById('lineimage2').style.filter = 'blur(0)';
+    document.getElementById('lineimage3').style.filter = 'blur(0)';
 
     this.getLines();
 
@@ -433,6 +435,7 @@ class App extends React.Component {
                       src={this.state.lineImg1}
                       height="70px"
                       alt=""
+                      id="lineimage1"
                     />
                     <p className="text-left line-text">
                       "{this.state.allLines[0]}"
@@ -448,6 +451,7 @@ class App extends React.Component {
                       src={this.state.lineImg2}
                       height="70px"
                       alt=""
+                      id="lineimage2"
                     />
                     <p className="text-left line-text">
                       "{this.state.allLines[1]}"
@@ -463,6 +467,7 @@ class App extends React.Component {
                       src={this.state.lineImg3}
                       height="70px"
                       alt=""
+                      id="lineimage3"
                     />
                     <p className="text-left line-text">
                       "{this.state.allLines[2]}"
