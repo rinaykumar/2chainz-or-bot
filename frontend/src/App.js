@@ -39,7 +39,7 @@ import Line30 from './assets/img/line-img/line30.jpg';
 import Akon from './assets/img/line-img/akon.jpg';
 import Heart from './assets/img/heart.png';
 import NoHeart from './assets/img/noheart.png';
-import Chain from './assets/img/chain.png';
+import Chain from './assets/img/chain3.png';
 import Loading from './assets/img/loading.gif';
 
 class App extends React.Component {
@@ -93,12 +93,9 @@ class App extends React.Component {
     this.setState({ lives: this.state.lives - 25 });
     switch (this.state.lives) {
       case 100:
-        document.getElementById('heart4').src = NoHeart;
-        break;
-      case 75:
         document.getElementById('heart3').src = NoHeart;
         break;
-      case 50:
+      case 75:
         document.getElementById('heart2').src = NoHeart;
         break;
       default:
@@ -133,7 +130,6 @@ class App extends React.Component {
     this.hideModal();
     this.hideModal2();
     this.hideModal3();
-    //this.getLines();
   }
 
   handleAgain() {
@@ -149,7 +145,6 @@ class App extends React.Component {
     document.getElementById('heart1').src = Heart;
     document.getElementById('heart2').src = Heart;
     document.getElementById('heart3').src = Heart;
-    document.getElementById('heart4').src = Heart;
     document.getElementById('outer-div').style.visibility = 'hidden';
     document.getElementById('loading').style.visibility = 'visible';
 
@@ -347,8 +342,6 @@ class App extends React.Component {
     }
     this.setLineImg2();
     this.setLineImg3();
-
-    console.log('Fake: ' + this.state.fakeLine);
   }
 
   counter(value) {
@@ -359,8 +352,7 @@ class App extends React.Component {
       this.setState({ correct: cor });
       this.showModal();
     } else {
-      console.log('Lives: ' + this.state.lives);
-      if (this.state.lives === 25) {
+      if (this.state.lives === 50) {
         this.showModal3();
       } else {
         this.showModal2();
@@ -368,7 +360,6 @@ class App extends React.Component {
     }
 
     this.setState({ total: tot });
-    //this.getLines();
   }
 
   componentDidMount() {
@@ -415,7 +406,6 @@ class App extends React.Component {
                     <img id="heart1" src={Heart} className="heartimg" alt="" />
                     <img id="heart2" src={Heart} className="heartimg" alt="" />
                     <img id="heart3" src={Heart} className="heartimg" alt="" />
-                    <img id="heart4" src={Heart} className="heartimg" alt="" />
                   </div>
                   <p className="score-text">
                     {this.state.correct}{' '}
