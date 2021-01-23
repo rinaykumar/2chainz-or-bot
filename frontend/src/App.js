@@ -74,6 +74,7 @@ class App extends React.Component {
       show: true,
     });
     document.getElementById('background').style.filter = 'blur(5px)';
+    this.getLines();
   }
 
   hideModal() {
@@ -88,6 +89,7 @@ class App extends React.Component {
       show2: true,
     });
     document.getElementById('background').style.filter = 'blur(5px)';
+    this.getLines();
     this.setState({ lives: this.state.lives - 25 });
     switch (this.state.lives) {
       case 100:
@@ -131,7 +133,7 @@ class App extends React.Component {
     this.hideModal();
     this.hideModal2();
     this.hideModal3();
-    this.getLines();
+    //this.getLines();
   }
 
   handleAgain() {
@@ -179,12 +181,13 @@ class App extends React.Component {
     document.getElementById('outer-div').style.visibility = 'hidden';
     document.getElementById('loading').style.visibility = 'visible';
 
+    this.getLines();
+
     setTimeout(function () {
       document.getElementById('outer-div').style.visibility = 'visible';
       document.getElementById('loading').style.visibility = 'hidden';
     }, 1200);
 
-    this.getLines();
   };
 
   setLineImg1() {
