@@ -168,9 +168,9 @@ body {
     font-style: oblique;
   }
 
-  #fake-line {
+  /* #fake-line {
     padding-bottom: 3px;
-  }
+  } */
 }
 
 @media (max-width: 575px) {
