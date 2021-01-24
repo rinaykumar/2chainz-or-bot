@@ -165,12 +165,9 @@ body {
     font-size: x-large;
     font-weight: 90;
     padding-bottom: 0px;
+    margin-bottom: 8px;
     font-style: oblique;
   }
-
-  /* #fake-line {
-    padding-bottom: 3px;
-  } */
 }
 
 @media (max-width: 575px) {
@@ -353,5 +350,6 @@ footer {
     height: 330px;
     margin: auto;
     z-index: 1;
+    padding-top: 5px;
   }
 }
