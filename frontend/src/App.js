@@ -383,7 +383,7 @@ class App extends React.Component {
             <h2>2 lines are real 2Chainz lyrics</h2>
             <h2 className="fake">1 is fake from a bot&nbsp;</h2>
             <div>
-              <p>Can you spot the fake line?</p>
+              <p id="fake-line">Can you spot the fake line?</p>
             </div>
           </section>
           <div className="outer-div text-center" id="outer-div">
