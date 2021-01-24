@@ -136,7 +136,7 @@ class App extends React.Component {
     this.hideModal();
     this.hideModal2();
     this.hideModal3();
-    
+
     this.setState({
       lives: 100,
       correct: 0,
@@ -168,15 +168,12 @@ class App extends React.Component {
 
   handleStart = () => {
     document.getElementById('blurdiv').style.filter = 'blur(0)';
-    document.getElementById('start-button').style.visibility = 'hidden';
+    document.getElementById('start-button').style.display = 'none';
     document.getElementById('lineBox').className += ' lineHover';
     document.getElementById('lineBox2').className += ' lineHover';
     document.getElementById('lineBox3').className += ' lineHover';
     document.getElementById('outer-div').style.visibility = 'hidden';
     document.getElementById('loading').style.visibility = 'visible';
-    document.getElementById('lineimage1').style.filter = 'blur(0)';
-    document.getElementById('lineimage2').style.filter = 'blur(0)';
-    document.getElementById('lineimage3').style.filter = 'blur(0)';
 
     this.getLines();
 
@@ -184,7 +181,6 @@ class App extends React.Component {
       document.getElementById('outer-div').style.visibility = 'visible';
       document.getElementById('loading').style.visibility = 'hidden';
     }, 1200);
-
   };
 
   setLineImg1() {
@@ -387,7 +383,7 @@ class App extends React.Component {
             <h2>2 lines are real 2Chainz lyrics</h2>
             <h2 className="fake">1 is fake from a bot&nbsp;</h2>
             <div>
-              <p className="fake-line">Can you spot the fake line?</p>
+              <p>Can you spot the fake line?</p>
             </div>
           </section>
           <div className="outer-div text-center" id="outer-div">
