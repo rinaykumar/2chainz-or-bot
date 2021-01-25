@@ -13,7 +13,13 @@ Can you identifiy the fake lyric?
 ![ui video demo](frontend/src/assets/img/ui-demo.gif)
 
 
-2CHAINZ OR BOT is a fullstak web application built with Python3 and Flask for the backend, and with Node.js and React.js for the frontend. It's deployed on AWS Elastic Beanstalk, with a domain from AWS Route 53, and SSL certified with AWS Certificate Manager.
+2CHAINZ OR BOT is a fullstak web application built with Python3 and Flask for the backend, and with Node.js and React.js for the frontend. 
+<br/>
+It's deployed on AWS Elastic Beanstalk, with a domain from AWS Route 53, and SSL certified with AWS Certificate Manager.
+
+### Backend
 
 A Markov chain creates a fake lyric based on a corpus of lyrics from over 300 2Chainz songs. 
-The lyrics were scrapped using Python and Beautiful Soup from Genius.com with a Genius API token. The Python backend uses Markovify to create a Markov chain from the 2Chainz corpus and generates a fake lyric, which is then placed in between two real lyrics by 2Chainz. 
+The lyrics were scrapped using Python and Beautiful Soup from Genius.com with a Genius API token. 
+<br/>
+The Python backend uses Markovify to create a Markov chain from the 2Chainz corpus and generates a fake lyric, which is then sent alongside two real 2Chainz lyrics to the frontend.
