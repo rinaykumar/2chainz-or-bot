@@ -24,4 +24,4 @@ A Markov chain creates a fake lyric based on a corpus of lyrics from over 300 2C
 The lyrics were scrapped using Python and Beautiful Soup from Genius.com with a Genius API token. 
 <br/>
 <br/>
-The Python backend uses Markovify to create a Markov chain from the 2Chainz corpus and generates a fake lyric, which is then sent alongside two real 2Chainz lyrics to the frontend.
+The Python backend uses Markovify and the 2Chainz corpus to generate a fake lyric, which is then sent alongside two real 2Chainz lyrics to the frontend.
