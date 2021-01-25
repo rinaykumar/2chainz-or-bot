@@ -378,7 +378,7 @@ class App extends React.Component {
                 height="70px"
                 alt=""
               />
-              <h1>&nbsp;2CHAINZ OR NOT</h1>
+              <h1>&nbsp;2CHAINZ OR BOT</h1>
             </div>
             <h2>2 lines are real 2Chainz lyrics</h2>
             <h2 className="fake">1 is fake from a bot&nbsp;</h2>

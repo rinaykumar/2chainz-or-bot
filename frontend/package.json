@@ -1,5 +1,5 @@
 {
-  "name": "2chainz-or-not",
+  "name": "2chainz-or-bot",
   "version": "0.0.1",
   "private": true,
   "proxy": "http://localhost:5000",
