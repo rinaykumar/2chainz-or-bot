@@ -22,4 +22,5 @@ It's deployed on AWS Elastic Beanstalk, with a domain from AWS Route 53, and SSL
 A Markov chain creates a fake lyric based on a corpus of lyrics from over 300 2Chainz songs. 
 The lyrics were scrapped using Python and Beautiful Soup from Genius.com with a Genius API token. 
 <br/>
+<br/>
 The Python backend uses Markovify to create a Markov chain from the 2Chainz corpus and generates a fake lyric, which is then sent alongside two real 2Chainz lyrics to the frontend.
