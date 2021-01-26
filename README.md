@@ -56,7 +56,7 @@ GENIUS_API_TOKEN='XXXXXXXX.....'
 # replace the write_lyrics_to_file in line 68 with any artist name and number of songs
 write_lyrics_to_file('artist name', number)
 
-# replace the text file in the 'lyrics' folder with 'artistname'.txt
+# replace the text file in the lyrics folder with an empty file named 'artistname'.txt
 
 # run the script
 python3 scrape.py
