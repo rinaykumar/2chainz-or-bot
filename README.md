@@ -8,12 +8,12 @@
 
 Two lyrics are real by rapper 2Chainz, one is fake from a bot in the style of 2Chainz.
 <br/>
-Can you identifiy the fake lyric?
+Can you identify the fake lyric?
 
 ![ui video demo](frontend/src/assets/img/ui-demo.gif)
 
 
-2CHAINZ OR BOT is a fullstak web application built with Python3 and Flask for the backend, and with Node.js and React.js for the frontend. 
+2CHAINZ OR BOT is a fullstack web application built with Python3 and Flask for the backend, and with Node.js and React.js for the frontend. 
 <br/>
 <br/>
 It's deployed on AWS Elastic Beanstalk, with a domain from AWS Route 53, and SSL certified with AWS Certificate Manager.
