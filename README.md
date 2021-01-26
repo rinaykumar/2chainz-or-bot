@@ -25,3 +25,39 @@ The lyrics were scrapped using Python and Beautiful Soup from Genius.com with a 
 <br/>
 <br/>
 The Python backend uses Markovify and the 2Chainz corpus to generate a fake lyric, which is then sent alongside two real 2Chainz lyrics to the frontend.
+
+### Local Install
+```bash
+# after cloning repo, cd into frontend folder
+
+# install node modules
+npm i
+
+# create build
+npm run build
+
+# cd into backend folder, install python requirements
+python3 -m pip install -r requirements.txt
+
+# set flask export
+export FLASK_APP=app
+
+# run local server
+flask run
+```
+
+### Run lyrics scraper locally
+```bash
+# cd into backend/scrape_lyrics folder
+
+# open scrape.py and replace the Genius API token with your own from Genius.com
+GENIUS_API_TOKEN='XXXXXXXX.....'
+
+# replace the write_lyrics_to_file in line 68 with any artist name and number of songs
+write_lyrics_to_file('artist name', number)
+
+# replace the text file in the 'lyrics' folder with 'artistname'.txt
+
+# run the script
+python3 scrape.py
+```
