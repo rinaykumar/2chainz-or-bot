@@ -1,4 +1,4 @@
-GENIUS_API_TOKEN='pMUyBB3CZDttn8r6nR61PZyyjCibSO-hTeyNLV3chHYhTps6bJCsr4Kv2Ll0wqYG'
+GENIUS_API_TOKEN='XXXXXXXX.....'
 
 import requests
 from bs4 import BeautifulSoup
