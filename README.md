@@ -4,7 +4,7 @@
 ![GitHub top language](https://img.shields.io/github/languages/top/rinaykumar/2chainz-or-bot)
 ![GitHub](https://img.shields.io/github/license/rinaykumar/2chainz-or-bot)
 
-[2chainzorbot.com](https://www.2chainzorbot.com/) 
+[https://www.2chainzorbot.com](https://www.2chainzorbot.com/) 
 
 Two lyrics are real by rapper 2Chainz, one is fake from a bot in the style of 2Chainz.
 <br/>
