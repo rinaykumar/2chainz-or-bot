@@ -16,7 +16,7 @@ Can you identify the fake lyric?
 2CHAINZ OR BOT is a fullstack web application built with Python and Flask for the backend, and with JavaScript, Node.js, React, CSS and HTML for the frontend. 
 <br/>
 <br/>
-It's deployed on AWS Elastic Beanstalk, with a domain from AWS Route 53, and SSL certified with AWS Certificate Manager.
+It's deployed on AWS Elastic Beanstalk, with a domain from Google Domains, and SSL certified with AWS Certificate Manager.
 
 ### Backend
 
